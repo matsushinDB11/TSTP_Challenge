@@ -10,14 +10,26 @@ class Shape:
 
 
 class Square(Shape):
+    # 問1
+    square_list = []
+
+    def __init__(self, w, l):
+        self.width = w
+        self.len = l
+        self.square_list.append(self)
+
     def area(self):
         return self.width * self.len
-
+    
+    # 問2
     def print_size(self):
-        print("""I am {} by {}
+        print(""" {} by {} by {} by {}
             """.format(self.width,
-                       self.len))
+                       self.len, self.width, self.len))
 
 
-a_square = Square(20, 20)
-a_square.print_size()
+square_one = Square(20, 20)
+square_one.print_size()
+square_two = Square(29, 29)
+square_two.print_size()
+print(Square.square_list)
