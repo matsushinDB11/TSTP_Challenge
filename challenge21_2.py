@@ -19,16 +19,18 @@ class Stack:
         return len(self.items)
 
 
-if __name__ == "__main__":
-    text = "yesterday"    
-
+def reverse_array(x):
     stack = Stack()
-    for c in text:
-        stack.push(c)
+    for num in x:
+        stack.push(num)
+    list_num = len(stack.items)
+    re_list = []
+    for i in range(list_num):
+        re_list.append(stack.pop())
+    return re_list
 
-    reversed_string = ""
 
-    for i in range(len(stack.items)):
-        reversed_string += stack.pop()
-
-    print(reversed_string)
+if __name__ == '__main__':
+    list_1 = [1, 2, 3, 4, 5]
+    list_2 = reverse_array(list_1)
+    print(list_2)
