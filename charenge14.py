@@ -28,8 +28,9 @@ class Square(Shape):
                        self.len, self.width, self.len))
 
 
-square_one = Square(20, 20)
-square_one.print_size()
-square_two = Square(29, 29)
-square_two.print_size()
-print(Square.square_list)
+if __name__ == '__main__':
+    square_one = Square(20, 20)
+    square_two = Square(29, 29)
+    print(Square.square_list)
+    square_one.print_size()
+    square_two.print_size()
