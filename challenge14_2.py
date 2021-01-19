@@ -1,10 +1,9 @@
 def two_parameter(x, y):
-    if x == y:
-        return True
-    else:
-        return False
+    return x is y
 
 
 if __name__ == '__main__':
-    print(two_parameter(2, 2))
-    print(two_parameter(2, 3))
+    list1 = [1, 2, 3]
+    list2 = [1, 2, 3]
+    print(two_parameter(list1, list1))
+    print(two_parameter(list1, list2))
